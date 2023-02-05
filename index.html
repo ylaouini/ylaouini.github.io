@@ -1,7 +1,318 @@
 <!DOCTYPE html>
-<html>
-<body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <!-- <link rel="stylesheet" href="src/css/locomotive-scroll.css"> -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap" rel="stylesheet">
+
+  <!-- <script data-pace-options='{"restartOnRequestAfter": false, "startOnPageLoad": false}' src="https://nerby.com/wp-content/themes/nerby/src/vendor/pace.min.js"></script>
+  <link rel="stylesheet" href="https://nerby.com/wp-content/themes/nerby/src/styles/components/pace-loader.css"> -->
+  <!-- <script>
+    //if(window.innerWidth > 1024) Pace.start();
+    var svg = '<svg width="252" height="252" viewBox="0 0 252 252" fill="none" xmlns="http://www.w3.org/2000/svg"> \
+                <circle cx="126" cy="126" r="125.5" stroke="#DDDDDD"/> \
+                <circle cx="126" cy="126" r="125.5" stroke="#111111" stroke-dasharray="790px" stroke-dashoffset="790px" class="svg-progress-dash"/> \
+               </svg>';
+    Pace.start();
+
+    var progressCircleEl = null;
+    Pace.on('start', function() {
+        var el = document.createElement('div');
+        el.classList.add('loader-svg');
+        el.innerHTML = svg;
+        progressCircleEl = el.querySelector('.svg-progress-dash');
+        Pace.bar.el.children[0].appendChild(el);
+    });
+    Pace.on('progress', function(p) {
+        progressCircleEl.setAttribute('stroke-dashoffset', (790 * (100 - p) / 100) + 'px');
+    });
+</script> -->
+
+  <script>
+    tailwind.config = {
+      theme: {
+        fontFamily: {
+          'sans': ['Poppins', 'sans-serif'],
+        },
+        extend: {
+          colors: {
+            clifford: '#da373d',
+          }
+        }
+      },
+
+    }
+  </script>
+</head>
+
+<body class="antialiased ">
+
+  <!-- https://locomotivemtl.github.io/locomotive-scroll/ -->
+  <dev id="page-wrapper" class="container">
+
+    <header class="overflow-auto pt-10 pb-5  border-b-2 border-gray-500 ">
+      <div class="container mx-auto w-11/12	">
+        <div class="float-left text-lg font-bold">> LAOUINI_</div>
+        <div class=" float-right flex ">
+          <nav class="mr-4">
+            <ul class="hidden space-x-6 md:flex text-base ">
+              <li class="transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300"><a href="#">HOME</a></li>
+              <li class="transition-all hover:border-b hover:border-black"><a href="#">ABOUT</a></li>
+              <li class="transition-all hover:border-b hover:border-black"><a href="#">PORTFOLIO</a></li>
+              <li class="transition-all hover:border-b hover:border-black"><a href="#">SKILLS</a></li>
+              <li class="transition-all hover:border-b hover:border-black"><a href="#">CONTACT</a></li>
+            </ul>
+          </nav>
+          <div>
+            <ul class="flex pl-9 ml-9 md:border-l-2 border-gray-500 space-x-2">
+              <li class="">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M10 1.66666C8.90567 1.66666 7.82204 1.8822 6.81099 2.30099C5.79995 2.71978 4.88129 3.33361 4.10746 4.10743C2.54466 5.67024 1.66669 7.78985 1.66669 9.99999C1.66669 13.6833 4.05835 16.8083 7.36669 17.9167C7.78335 17.9833 7.91669 17.725 7.91669 17.5V16.0917C5.60835 16.5917 5.11669 14.975 5.11669 14.975C4.73335 14.0083 4.19169 13.75 4.19169 13.75C3.43335 13.2333 4.25002 13.25 4.25002 13.25C5.08335 13.3083 5.52502 14.1083 5.52502 14.1083C6.25002 15.375 7.47502 15 7.95002 14.8C8.02502 14.2583 8.24169 13.8917 8.47502 13.6833C6.62502 13.475 4.68335 12.7583 4.68335 9.58332C4.68335 8.65832 5.00002 7.91666 5.54169 7.32499C5.45835 7.11666 5.16669 6.24999 5.62502 5.12499C5.62502 5.12499 6.32502 4.89999 7.91669 5.97499C8.57502 5.79166 9.29169 5.69999 10 5.69999C10.7084 5.69999 11.425 5.79166 12.0834 5.97499C13.675 4.89999 14.375 5.12499 14.375 5.12499C14.8334 6.24999 14.5417 7.11666 14.4584 7.32499C15 7.91666 15.3167 8.65832 15.3167 9.58332C15.3167 12.7667 13.3667 13.4667 11.5084 13.675C11.8084 13.9333 12.0834 14.4417 12.0834 15.2167V17.5C12.0834 17.725 12.2167 17.9917 12.6417 17.9167C15.95 16.8 18.3334 13.6833 18.3334 9.99999C18.3334 8.90564 18.1178 7.82201 17.699 6.81096C17.2802 5.79991 16.6664 4.88125 15.8926 4.10743C15.1188 3.33361 14.2001 2.71978 13.189 2.30099C12.178 1.8822 11.0944 1.66666 10 1.66666Z"
+                    fill="black" />
+                </svg>
+              </li>
+
+              <li class="">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M18.0928 5.00001C17.4725 5.29168 16.8039 5.48334 16.1111 5.57501C16.82 5.13334 17.3678 4.43334 17.6255 3.59168C16.9569 4.00834 16.2158 4.30001 15.4344 4.46668C14.798 3.75001 13.9039 3.33334 12.8889 3.33334C10.9958 3.33334 9.44915 4.93334 9.44915 6.90834C9.44915 7.19168 9.48137 7.46668 9.53776 7.72501C6.66998 7.57501 4.11637 6.15001 2.41665 3.99168C2.1186 4.51668 1.94943 5.13334 1.94943 5.78334C1.94943 7.02501 2.5536 8.12501 3.48804 8.75001C2.9161 8.75001 2.38443 8.58334 1.91721 8.33334V8.35834C1.91721 10.0917 3.10943 11.5417 4.68832 11.8667C4.1814 12.0102 3.64923 12.0302 3.1336 11.925C3.35239 12.6354 3.78089 13.257 4.35886 13.7025C4.93683 14.1479 5.6352 14.3948 6.35582 14.4083C5.1343 15.4087 3.62015 15.9494 2.06221 15.9417C1.78832 15.9417 1.51443 15.925 1.24054 15.8917C2.7711 16.9083 4.59165 17.5 6.54109 17.5C12.8889 17.5 16.3769 12.05 16.3769 7.32501C16.3769 7.16668 16.3769 7.01668 16.3689 6.85834C17.0455 6.35834 17.6255 5.72501 18.0928 5.00001Z"
+                    fill="black" />
+                </svg>
+              </li>
+
+              <li>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M17.3504 1.25H2.74531C1.94727 1.25 1.25 1.82422 1.25 2.61289V17.2504C1.25 18.0434 1.94727 18.75 2.74531 18.75H17.3461C18.1484 18.75 18.75 18.0387 18.75 17.2504V2.61289C18.7547 1.82422 18.1484 1.25 17.3504 1.25ZM6.67461 15.8371H4.16758V8.04219H6.67461V15.8371ZM5.50781 6.85703H5.48984C4.6875 6.85703 4.16797 6.25977 4.16797 5.51211C4.16797 4.75078 4.70117 4.16758 5.52148 4.16758C6.3418 4.16758 6.84375 4.74648 6.86172 5.51211C6.86133 6.25977 6.3418 6.85703 5.50781 6.85703ZM15.8371 15.8371H13.3301V11.575C13.3301 10.5539 12.9652 9.85625 12.0582 9.85625C11.3652 9.85625 10.9551 10.325 10.7727 10.7816C10.7043 10.9457 10.6859 11.1691 10.6859 11.3973V15.8371H8.17891V8.04219H10.6859V9.12695C11.0508 8.60742 11.6207 7.85977 12.9469 7.85977C14.5926 7.85977 15.8375 8.94453 15.8375 11.2832L15.8371 15.8371Z"
+                    fill="black" />
+                </svg>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </header>
+
+    <main class="">
+
+      <section id="hero" class="pb-20">
+        <div class="container mx-auto w-11/12	">
+          <div class="py-14  md:py-32 lg:py-48 ">
+            <h1 class="text-4xl md:text-6xl lg:text-9xl font-light tracking-widest">
+              L.YASSINE</h1>
+            <span class="text-4xl md:text-6xl lg:text-9xl font-light tracking-widest">PORTFOLIO SITE.</span>
+          </div>
+          <div class="md:w-1/3  lg:w-1/3  ">
+            <p class="text-sm lg:text-xl">7 years of experience as a test programmer and as a freelancer, I have
+              acquired the skills and knowledge
+              necessary to make your project a success and be an added value for your team.</p>
+          </div>
+        </div>
+
+      </section>
+
+
+
+      <section id="portfolio" class="pb-20">
+        <div class="container mx-auto w-11/12	">
+
+          <header class="text-7xl py-3 text-[#eee]">Portfolio</header>
+
+
+          <div class="border-t border-black py-5 lg:flex lg:space-x-7">
+
+            <div class="space-y-2 lg:w-2/6 pb-5 ">
+              <div class=" max-w-xs  lg:my-8 xl:my-16 ">
+                <h2 class="text-4xl lg:text-7xl font-light">Label Print</h2>
+              </div>
+
+              <div>
+                <span class="text-base md:text-xl  lg:text-2xl">UI Design / Development</span>
+              </div>
+
+              <div class="hidden sm:block">
+                <p class=" text-sm  md:text-base lg:text-xl xl:text-xl 2xl:text-xl">We live in a world where we need to move quickly
+                  and iterate on our ideas as
+                  flexibly as possible. Building mockups strikes the ideal balance ease of modification.</p>
+              </div>
+
+            </div>
+
+            <div class="py-2 lg:w-4/6">
+              <video src="video/Clash-Royale.mp4"></video>
+            </div>
+
+          </div>
+
+
+
+        </div>
+      </section>
+
+
+      <section id="resume" class="pb-20">
+        
+        <div class="container mx-auto w-11/12 ">
+          <header class="text-7xl py-3 text-[#eee]">Resume</header>
+
+          <div class="lg:grid lg:grid-cols-2 xl:grid xl:grid-cols-2 2xl:grid 2xl:grid-cols-2 gap-14">
+            <div class="w-full">
+              <h2 class="text-4xl mb-16 font-light">Education</h2>
+  
+              <div class="bg-white border-b border-gray-500 overflow-auto pb-2 mb-14 ">
+  
+                <div class="text-lg pb-2 md:text-xl w-4/5 leading-relaxed">
+                  Master in Network, System and Security
+                </div>
+                <div class="float-left text-lg md:text-base">LEAR</div>
+                <div class="float-right text-lg md:text-base">2013 - 2015</div>
+              </div>
+  
+              <div class="bg-white border-b border-gray-500 overflow-auto pb-2 mb-14 ">
+  
+                <div class="text-lg pb-2 md:text-xl w-4/5">
+                  Technician Specialized in Computer Systems and Networks
+                </div>
+                <div class="float-left text-lg md:text-base">ETIGE</div>
+                <div class="float-right text-lg md:text-base">2013 - 2015</div>
+              </div>
+  
+              <div class="bg-white border-b border-gray-500 overflow-auto pb-2 mb-14 ">
+  
+                <div class="text-lg pb-2 md:text-xl w-4/5">
+                  MAINTENANCE AND IT SUPPORT AND NETWORKS TECHNICIAN
+                </div>
+                <div class="float-left text-lg md:text-base">OFPPT</div>
+                <div class="float-right text-lg md:text-base">2011 - 2013</div>
+              </div>
+  
+  
+  
+            </div>
+  
+  
+            <div class="w-full">
+  
+              <h2 class="text-4xl mb-16 font-light">Experience</h2>
+  
+              <div class="bg-white border-b border-gray-500 overflow-auto pb-2 mb-14 ">
+  
+                <div class="text-lg pb-2 md:text-xl w-4/5">
+                  SENIOR PROGRAMMING TECHNICIANS
+                </div>
+                <div class="float-left text-lg md:text-base">LEAR</div>
+                <div class="float-right text-lg md:text-base">2018 - running</div>
+              </div>
+  
+              <div class="bg-white border-b border-gray-500 overflow-auto pb-2 mb-14 ">
+  
+                <div class="text-lg pb-2 md:text-xl w-4/5">
+                  PROGRAMMING TECHNICIANS
+                </div>
+                <div class="float-left text-lg md:text-base">YAZAKI</div>
+                <div class="float-right text-lg md:text-base">2016 - 2018</div>
+              </div>
+  
+  
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+
+
+    <footer class="text-white bg-black ">
+      <div class="container mx-auto w-11/12	">
+
+
+        <div class="flex mb-28 pt-28">
+          <div>
+            <img class="w-24 rounded-full" src="img/profile.JPG" alt="">
+          </div>
+
+          <div class="w-80  grid place-items-center ml-4 md:ml-0 lg:ml-0">
+            <p class="text-base">Please feel free to contact me
+              by <br> e-mail</p>
+          </div>
+        </div>
+
+
+        <div class="mb-28 border-b-2 w-fit pb-3">
+          <span class="text-2xl"><a href="mailto:yassine@laouini.net">YASSINE@LAOUINI.NET</a></span>
+        </div>
+
+        <div class="grid grid-cols-2 gap-4 place-content-between">
+          <div>
+            <div class="mb-4">
+              FOLLOW ME
+            </div>
+            <div>
+              <ul class="flex space-x-3">
+                <li>
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M10 1.66666C8.90567 1.66666 7.82204 1.8822 6.81099 2.30099C5.79995 2.71978 4.88129 3.33361 4.10746 4.10743C2.54466 5.67024 1.66669 7.78985 1.66669 9.99999C1.66669 13.6833 4.05835 16.8083 7.36669 17.9167C7.78335 17.9833 7.91669 17.725 7.91669 17.5V16.0917C5.60835 16.5917 5.11669 14.975 5.11669 14.975C4.73335 14.0083 4.19169 13.75 4.19169 13.75C3.43335 13.2333 4.25002 13.25 4.25002 13.25C5.08335 13.3083 5.52502 14.1083 5.52502 14.1083C6.25002 15.375 7.47502 15 7.95002 14.8C8.02502 14.2583 8.24169 13.8917 8.47502 13.6833C6.62502 13.475 4.68335 12.7583 4.68335 9.58332C4.68335 8.65832 5.00002 7.91666 5.54169 7.32499C5.45835 7.11666 5.16669 6.24999 5.62502 5.12499C5.62502 5.12499 6.32502 4.89999 7.91669 5.97499C8.57502 5.79166 9.29169 5.69999 10 5.69999C10.7084 5.69999 11.425 5.79166 12.0834 5.97499C13.675 4.89999 14.375 5.12499 14.375 5.12499C14.8334 6.24999 14.5417 7.11666 14.4584 7.32499C15 7.91666 15.3167 8.65832 15.3167 9.58332C15.3167 12.7667 13.3667 13.4667 11.5084 13.675C11.8084 13.9333 12.0834 14.4417 12.0834 15.2167V17.5C12.0834 17.725 12.2167 17.9917 12.6417 17.9167C15.95 16.8 18.3334 13.6833 18.3334 9.99999C18.3334 8.90564 18.1178 7.82201 17.699 6.81096C17.2802 5.79991 16.6664 4.88125 15.8926 4.10743C15.1188 3.33361 14.2001 2.71978 13.189 2.30099C12.178 1.8822 11.0944 1.66666 10 1.66666Z"
+                      fill="white" />
+                  </svg>
+                </li>
+
+                <li>
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M18.0928 5.00001C17.4725 5.29168 16.8039 5.48334 16.1111 5.57501C16.82 5.13334 17.3678 4.43334 17.6255 3.59168C16.9569 4.00834 16.2158 4.30001 15.4344 4.46668C14.798 3.75001 13.9039 3.33334 12.8889 3.33334C10.9958 3.33334 9.44915 4.93334 9.44915 6.90834C9.44915 7.19168 9.48137 7.46668 9.53776 7.72501C6.66998 7.57501 4.11637 6.15001 2.41665 3.99168C2.1186 4.51668 1.94943 5.13334 1.94943 5.78334C1.94943 7.02501 2.5536 8.12501 3.48804 8.75001C2.9161 8.75001 2.38443 8.58334 1.91721 8.33334V8.35834C1.91721 10.0917 3.10943 11.5417 4.68832 11.8667C4.1814 12.0102 3.64923 12.0302 3.1336 11.925C3.35239 12.6354 3.78089 13.257 4.35886 13.7025C4.93683 14.1479 5.6352 14.3948 6.35582 14.4083C5.1343 15.4087 3.62015 15.9494 2.06221 15.9417C1.78832 15.9417 1.51443 15.925 1.24054 15.8917C2.7711 16.9083 4.59165 17.5 6.54109 17.5C12.8889 17.5 16.3769 12.05 16.3769 7.32501C16.3769 7.16668 16.3769 7.01668 16.3689 6.85834C17.0455 6.35834 17.6255 5.72501 18.0928 5.00001Z"
+                      fill="white" />
+                  </svg>
+                </li>
+
+                <li>
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M17.3504 1.25H2.74531C1.94727 1.25 1.25 1.82422 1.25 2.61289V17.2504C1.25 18.0434 1.94727 18.75 2.74531 18.75H17.3461C18.1484 18.75 18.75 18.0387 18.75 17.2504V2.61289C18.7547 1.82422 18.1484 1.25 17.3504 1.25ZM6.67461 15.8371H4.16758V8.04219H6.67461V15.8371ZM5.50781 6.85703H5.48984C4.6875 6.85703 4.16797 6.25977 4.16797 5.51211C4.16797 4.75078 4.70117 4.16758 5.52148 4.16758C6.3418 4.16758 6.84375 4.74648 6.86172 5.51211C6.86133 6.25977 6.3418 6.85703 5.50781 6.85703ZM15.8371 15.8371H13.3301V11.575C13.3301 10.5539 12.9652 9.85625 12.0582 9.85625C11.3652 9.85625 10.9551 10.325 10.7727 10.7816C10.7043 10.9457 10.6859 11.1691 10.6859 11.3973V15.8371H8.17891V8.04219H10.6859V9.12695C11.0508 8.60742 11.6207 7.85977 12.9469 7.85977C14.5926 7.85977 15.8375 8.94453 15.8375 11.2832L15.8371 15.8371Z"
+                      fill="white" />
+                  </svg>
+                </li>
+
+              </ul>
+            </div>
+          </div>
+
+          <div class="">
+            <nav class="float-right">
+              <ul class=" text-base">
+                <li class="">HOME</li>
+                <li class="">ABOUT</li>
+                <li class="">PORTFOLIO</li>
+                <li class="">SKILLS</li>
+                <li class="">CONTACT</li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+
+        <div class="h-16 border-t border-white pt-4">
+            <div>© Yassine LAOUINI. All Rights Reserved.</div>
+        </div>
+      </div>
+
+    </footer>
+
+
+    <!-- <script src="src/js/locomotive-scroll.min.js"></script>
+    <script src="src/js/index.js"></script> -->
+  </dev>
 </body>
-</html>
