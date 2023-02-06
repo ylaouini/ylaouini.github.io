@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="is-smooth-scroll-compatible is-loaded is-ready has-scroll-init has-scroll-smooth">
 
 <head>
   <meta charset="UTF-8">
@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 
-  <!-- <link rel="stylesheet" href="src/css/locomotive-scroll.css"> -->
+  <!-- <link rel="stylesheet" href="dist/css/locomotive-scroll.css"> -->
   <script src="https://cdn.tailwindcss.com"></script>
 
 
@@ -54,36 +54,6 @@
     }
   </script>
 
-  <style>
-    /* Top and Bottom borders go out */
-    div.topBotomBordersOut li:before,
-    div.topBotomBordersOut li:after {
-      position: absolute;
-      left: 0px;
-      width: 100%;
-      height: 2px;
-      background: #4b2929;
-      content: "";
-      opacity: 0;
-      transition: all 0.3s;
-    }
-
-    div.topBotomBordersOut li:before {
-      top: 0px;
-      transform: translateY(10px);
-    }
-
-    div.topBotomBordersOut li:after {
-      bottom: 0px;
-      transform: translateY(-10px);
-    }
-
-    div.topBotomBordersOut li:hover:before,
-    div.topBotomBordersOut li:hover:after {
-      opacity: 1;
-      transform: translateY(0px);
-    }
-  </style>
 </head>
 
 <body class="antialiased ">
@@ -216,17 +186,19 @@
           <header class="text-7xl py-3 text-[#eee]">Resume</header>
 
           <div class="lg:grid lg:grid-cols-2 xl:grid xl:grid-cols-2 2xl:grid 2xl:grid-cols-2 gap-14">
-            <div class="w-full">
+            <div class="w-full group">
               <h2 class="text-4xl mb-16 font-light">Education</h2>
 
-              <div class="bg-white border-b border-gray-500 overflow-auto pb-2 mb-14 ">
+              <div class="bg-white border-b border-gray-500 overflow-auto pb-2 mb-14 0">
 
                 <div class="text-lg pb-2 md:text-xl w-4/5 leading-relaxed">
                   Master in Network, System and Security
                 </div>
                 <div class="float-left text-lg md:text-base">LEAR</div>
                 <div class="float-right text-lg md:text-base">2013 - 2015</div>
+                
               </div>
+              
 
               <div class="bg-white border-b border-gray-500 overflow-auto pb-2 mb-14 ">
 
@@ -357,9 +329,15 @@
       </div>
 
     </footer>
-
-
-    <!-- <script src="src/js/locomotive-scroll.min.js"></script>
-    <script src="src/js/index.js"></script> -->
   </dev>
+
+
+  <script src="dist/js/locomotive-scroll.min.js"></script>
+
+  <script>
+        const scroller = new LocomotiveScroll({
+        el: document.querySelector("[data-scroll-container]"),
+        smooth: true
+        });
+</script>
 </body>
