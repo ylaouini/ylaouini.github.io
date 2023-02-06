@@ -55,37 +55,34 @@
   </script>
 
   <style>
-/* Top and Bottom borders go out */
-div.topBotomBordersOut li:before, div.topBotomBordersOut li:after
-{
-    position: absolute;
-    left: 0px;
-    width: 100%;
-    height: 2px;
-    background: #4b2929;
-    content: "";
-    opacity: 0;
-    transition: all 0.3s;
-}
+    /* Top and Bottom borders go out */
+    div.topBotomBordersOut li:before,
+    div.topBotomBordersOut li:after {
+      position: absolute;
+      left: 0px;
+      width: 100%;
+      height: 2px;
+      background: #4b2929;
+      content: "";
+      opacity: 0;
+      transition: all 0.3s;
+    }
 
-div.topBotomBordersOut li:before
-{
-    top: 0px;
-    transform: translateY(10px);
-}
+    div.topBotomBordersOut li:before {
+      top: 0px;
+      transform: translateY(10px);
+    }
 
-div.topBotomBordersOut li:after
-{
-    bottom: 0px;
-    transform: translateY(-10px);
-}
+    div.topBotomBordersOut li:after {
+      bottom: 0px;
+      transform: translateY(-10px);
+    }
 
-div.topBotomBordersOut li:hover:before, div.topBotomBordersOut li:hover:after
-{
-    opacity: 1;
-    transform: translateY(0px);
-}
-
+    div.topBotomBordersOut li:hover:before,
+    div.topBotomBordersOut li:hover:after {
+      opacity: 1;
+      transform: translateY(0px);
+    }
   </style>
 </head>
 
@@ -94,18 +91,28 @@ div.topBotomBordersOut li:hover:before, div.topBotomBordersOut li:hover:after
   <!-- https://locomotivemtl.github.io/locomotive-scroll/ -->
   <dev id="page-wrapper" class="container">
 
-    
+
     <header class="overflow-auto pt-10 pb-5  border-b-2 border-gray-500 ">
       <div class="container mx-auto w-11/12	">
         <div class="float-left text-lg font-bold">> LAOUINI_</div>
         <div class=" float-right flex ">
           <nav class="mr-4">
             <ul class="hidden space-x-6 md:flex text-base bracker ">
-              <li class="transition-all duration-300 hover:border-b hover:border-black "><a href="#">HOME</a></li>
-              <li class="transition-all duration-300 hover:border-b hover:border-black "><a href="#">ABOUT</a></li>
-              <li class="transition-all duration-300 hover:border-b hover:border-black "><a href="#">PORTFOLIO</a></li>
-              <li class="transition-all duration-300 hover:border-b hover:border-black "><a href="#">SKILLS</a></li>
-              <li class="transition-all duration-300 hover:border-b hover:border-black    "><a href="#">CONTACT</a></li>
+              <li class="group  transition duration-300"><a href="#">HOME</a>
+                <span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black"></span>
+              </li>
+              <li class="group  transition duration-300"><a href="#">ABOUT</a>
+                <span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black"></span>
+              </li>
+              <li class="group  transition duration-300"><a href="#">PORTFOLIO</a>
+                <span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black"></span>
+              </li>
+              <li class="group  transition duration-300"><a href="#">SKILLS</a>
+                <span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black"></span>
+              </li>
+              <li class="group  transition duration-300"><a href="#">CONTACT</a>
+                <span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black"></span>
+              </li>
             </ul>
 
           </nav>
@@ -137,6 +144,7 @@ div.topBotomBordersOut li:hover:before, div.topBotomBordersOut li:hover:after
               </li>
 
             </ul>
+
           </div>
         </div>
       </div>
@@ -154,7 +162,7 @@ div.topBotomBordersOut li:hover:before, div.topBotomBordersOut li:hover:after
           </div>
           <div class="md:w-1/3  lg:w-1/3  ">
 
-            
+
             <p class="text-sm lg:text-xl ">7 years of experience as a test programmer and as a freelancer, I have
               acquired the skills and knowledge
               necessary to make your project a success and be an added value for your team.</p>
@@ -183,7 +191,7 @@ div.topBotomBordersOut li:hover:before, div.topBotomBordersOut li:hover:after
               </div>
 
               <div class="hidden sm:block">
-                <p class=" text-sm  md:text-base lg:text-xl xl:text-xl 2xl:text-xl">We live in a world where we need to move quickly
+                <p class=" text-sm  md:text-base lg:text-xl">We live in a world where we need to move quickly
                   and iterate on our ideas as
                   flexibly as possible. Building mockups strikes the ideal balance ease of modification.</p>
               </div>
@@ -191,7 +199,7 @@ div.topBotomBordersOut li:hover:before, div.topBotomBordersOut li:hover:after
             </div>
 
             <div class="py-2 lg:w-4/6">
-              <video src="video/Clash-Royale.mp4"></video>
+              <img class="border-2 border-black rounded-xl" src="img/machine book.png"></img>
             </div>
 
           </div>
@@ -203,69 +211,69 @@ div.topBotomBordersOut li:hover:before, div.topBotomBordersOut li:hover:after
 
 
       <section id="resume" class="pb-20">
-        
+
         <div class="container mx-auto w-11/12 ">
           <header class="text-7xl py-3 text-[#eee]">Resume</header>
 
           <div class="lg:grid lg:grid-cols-2 xl:grid xl:grid-cols-2 2xl:grid 2xl:grid-cols-2 gap-14">
             <div class="w-full">
               <h2 class="text-4xl mb-16 font-light">Education</h2>
-  
+
               <div class="bg-white border-b border-gray-500 overflow-auto pb-2 mb-14 ">
-  
+
                 <div class="text-lg pb-2 md:text-xl w-4/5 leading-relaxed">
                   Master in Network, System and Security
                 </div>
                 <div class="float-left text-lg md:text-base">LEAR</div>
                 <div class="float-right text-lg md:text-base">2013 - 2015</div>
               </div>
-  
+
               <div class="bg-white border-b border-gray-500 overflow-auto pb-2 mb-14 ">
-  
+
                 <div class="text-lg pb-2 md:text-xl w-4/5">
                   Technician Specialized in Computer Systems and Networks
                 </div>
                 <div class="float-left text-lg md:text-base">ETIGE</div>
                 <div class="float-right text-lg md:text-base">2013 - 2015</div>
               </div>
-  
+
               <div class="bg-white border-b border-gray-500 overflow-auto pb-2 mb-14 ">
-  
+
                 <div class="text-lg pb-2 md:text-xl w-4/5">
                   MAINTENANCE AND IT SUPPORT AND NETWORKS TECHNICIAN
                 </div>
                 <div class="float-left text-lg md:text-base">OFPPT</div>
                 <div class="float-right text-lg md:text-base">2011 - 2013</div>
               </div>
-  
-  
-  
+
+
+
             </div>
-  
-  
+
+
             <div class="w-full">
-  
+
               <h2 class="text-4xl mb-16 font-light">Experience</h2>
-  
+
               <div class="bg-white border-b border-gray-500 overflow-auto pb-2 mb-14 ">
-  
+
                 <div class="text-lg pb-2 md:text-xl w-4/5">
                   SENIOR PROGRAMMING TECHNICIANS
                 </div>
                 <div class="float-left text-lg md:text-base">LEAR</div>
                 <div class="float-right text-lg md:text-base">2018 - running</div>
               </div>
-  
+
               <div class="bg-white border-b border-gray-500 overflow-auto pb-2 mb-14 ">
-  
+
                 <div class="text-lg pb-2 md:text-xl w-4/5">
                   PROGRAMMING TECHNICIANS
                 </div>
                 <div class="float-left text-lg md:text-base">YAZAKI</div>
                 <div class="float-right text-lg md:text-base">2016 - 2018</div>
               </div>
-  
-  
+
+
             </div>
           </div>
 
@@ -344,7 +352,7 @@ div.topBotomBordersOut li:hover:before, div.topBotomBordersOut li:hover:after
         </div>
 
         <div class="h-16 border-t border-white pt-4">
-            <div>© Yassine LAOUINI. All Rights Reserved.</div>
+          <div>© Yassine LAOUINI. All Rights Reserved.</div>
         </div>
       </div>
 
