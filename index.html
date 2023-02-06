@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="is-smooth-scroll-compatible is-loaded is-ready has-scroll-init has-scroll-smooth">
+<html lang="en" class="">
 
 <head>
   <meta charset="UTF-8">
@@ -8,7 +8,9 @@
   <title>Document</title>
 
   <!-- <link rel="stylesheet" href="dist/css/locomotive-scroll.css"> -->
-  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+
+  <link rel="stylesheet" href="dist/css/output.css">
 
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -38,29 +40,12 @@
     });
 </script> -->
 
-  <script>
-    tailwind.config = {
-      theme: {
-        fontFamily: {
-          'sans': ['Poppins', 'sans-serif'],
-        },
-        extend: {
-          colors: {
-            clifford: '#da373d',
-          }
-        }
-      },
-
-    }
-  </script>
-
 </head>
 
 <body class="antialiased ">
 
   <!-- https://locomotivemtl.github.io/locomotive-scroll/ -->
   <dev id="page-wrapper" class="container">
-
 
     <header class="overflow-auto pt-10 pb-5  border-b-2 border-gray-500 ">
       <div class="container mx-auto w-11/12	">
@@ -121,12 +106,12 @@
 
     </header>
 
-    <main class="">
+    <main class="" >
 
-      <section id="hero" class="pb-20">
+      <section id="hero" class="pb-20 " >
         <div class="container mx-auto w-11/12	">
           <div class="py-20  md:py-32 lg:py-48 ">
-            <h1 class="text-4xl md:text-6xl lg:text-9xl font-light tracking-widest">
+            <h1 class="text-4xl md:text-6xl lg:text-9xl font-light tracking-widest" >
               L.YASSINE</h1>
             <span class="text-4xl md:text-6xl lg:text-9xl font-light tracking-widest">PORTFOLIO SITE.</span>
           </div>
@@ -143,13 +128,18 @@
 
 
 
-      <section id="portfolio" class="pb-20">
-        <div class="container mx-auto w-11/12	">
-
-          <header class="text-7xl py-3 text-[#eee]">Portfolio</header>
+      <section id="portfolio" class="pb-20" >
+        <div class="container mx-auto w-11/12	" >
 
 
-          <div class="border-t border-black py-5 lg:flex lg:space-x-7">
+          <header  class="text-7xl py-3 text-[#eee]">
+           Portfolio
+          </header>
+
+
+
+
+          <div class="border-t border-black py-5 lg:flex lg:space-x-7" >
 
             <div class="space-y-2 lg:w-2/6 pb-5 ">
               <div class=" max-w-xs  lg:my-8 xl:my-16 ">
@@ -196,9 +186,9 @@
                 </div>
                 <div class="float-left text-lg md:text-base">LEAR</div>
                 <div class="float-right text-lg md:text-base">2013 - 2015</div>
-                
+
               </div>
-              
+
 
               <div class="bg-white border-b border-gray-500 overflow-auto pb-2 mb-14 ">
 
@@ -332,12 +322,20 @@
   </dev>
 
 
+
+
   <script src="dist/js/locomotive-scroll.min.js"></script>
 
+
   <script>
-        const scroller = new LocomotiveScroll({
-        el: document.querySelector("[data-scroll-container]"),
-        smooth: true
-        });
-</script>
+
+    const scroller = new LocomotiveScroll({
+      el: document.querySelector("[data-scroll-container]"),
+      smooth: true
+    });
+
+  </script>
+
+
+
 </body>
