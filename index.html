@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="">
+<html lang="en" class="scroll-smooth ">
 
 <head>
   <meta charset="UTF-8">
@@ -8,14 +8,31 @@
   <title>Document</title>
 
   <!-- <link rel="stylesheet" href="dist/css/locomotive-scroll.css"> -->
-  <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+  <script src="https://cdn.tailwindcss.com"></script>
 
-  <link rel="stylesheet" href="dist/css/output.css">
+  <!-- <link rel="stylesheet" href="dist/css/output.css"> -->
 
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap" rel="stylesheet">
+
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+          'sans': ['Poppins', 'sans-serif'],
+        },
+          colors: {
+            clifford: '#da373d',
+          }
+        }
+      }
+    }
+  </script>
+
 
   <!-- <script data-pace-options='{"restartOnRequestAfter": false, "startOnPageLoad": false}' src="https://nerby.com/wp-content/themes/nerby/src/vendor/pace.min.js"></script>
   <link rel="stylesheet" href="https://nerby.com/wp-content/themes/nerby/src/styles/components/pace-loader.css"> -->
@@ -44,7 +61,6 @@
 
 <body class="antialiased ">
 
-  <!-- https://locomotivemtl.github.io/locomotive-scroll/ -->
   <dev id="page-wrapper" class="container">
 
     <header class="overflow-auto pt-10 pb-5  border-b-2 border-gray-500 ">
@@ -53,19 +69,19 @@
         <div class=" float-right flex ">
           <nav class="mr-4">
             <ul class="hidden space-x-6 md:flex text-base bracker ">
-              <li class="group  transition duration-300"><a href="#">HOME</a>
+              <li class="group  transition duration-300"><a href="#home">HOME</a>
                 <span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black"></span>
               </li>
-              <li class="group  transition duration-300"><a href="#">ABOUT</a>
+              <li class="group  transition duration-300"><a href="#about">ABOUT</a>
                 <span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black"></span>
               </li>
-              <li class="group  transition duration-300"><a href="#">PORTFOLIO</a>
+              <li class="group  transition duration-300"><a href="#portfolio">PORTFOLIO</a>
                 <span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black"></span>
               </li>
               <li class="group  transition duration-300"><a href="#">SKILLS</a>
                 <span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black"></span>
               </li>
-              <li class="group  transition duration-300"><a href="#">CONTACT</a>
+              <li class="group  transition duration-300"><a href="#contact">CONTACT</a>
                 <span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black"></span>
               </li>
             </ul>
@@ -108,7 +124,7 @@
 
     <main class="" >
 
-      <section id="hero" class="pb-20 " >
+      <section id="home" class="pb-20 " >
         <div class="container mx-auto w-11/12	">
           <div class="py-20  md:py-32 lg:py-48 ">
             <h1 class="text-4xl md:text-6xl lg:text-9xl font-light tracking-widest" >
@@ -245,7 +261,7 @@
     </main>
 
 
-    <footer class="text-white bg-black ">
+    <footer id="contact" class="text-white bg-black ">
       <div class="container mx-auto w-11/12	">
 
 
@@ -320,22 +336,6 @@
 
     </footer>
   </dev>
-
-
-
-
-  <script src="dist/js/locomotive-scroll.min.js"></script>
-
-
-  <script>
-
-    const scroller = new LocomotiveScroll({
-      el: document.querySelector("[data-scroll-container]"),
-      smooth: true
-    });
-
-  </script>
-
 
 
 </body>
